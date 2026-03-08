@@ -20,19 +20,19 @@ A complete Pokédex built with Vanilla JS consuming the public PokéAPI. Include
 
 ### 🏠 Catálogo Principal
 
-![Catalog 1](URL_IMAGEN_1)
+![Catalog 1](https://github.com/user-attachments/assets/48152dac-6e5b-4c6e-a823-fcdaa93500d0)
 
-![Catalog 2](URL_IMAGEN_2)
+![Catalog 2](https://github.com/user-attachments/assets/087429d4-7e5e-4d04-92cc-229016bfc0c2)
 
 ### 🔍 Detalle de Pokémon
 
-![Detail 1](URL_IMAGEN_3)
+![Detail 1](https://github.com/user-attachments/assets/49905a49-d715-49db-b2b3-73a2443b6a76)
 
-![Detail 2](URL_IMAGEN_4)
+![Detail 2](https://github.com/user-attachments/assets/2c0c817f-8128-4dc8-b8be-1eab8bb0973b)
 
 ### ⚔️ Comparador
 
-![Comparator](URL_IMAGEN_5)
+![Comparator](https://github.com/user-attachments/assets/04e46fb8-4b2c-4b95-8103-b7ff4decc517)
 
 ---
 
