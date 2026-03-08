@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador — Pokédex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+    <header class="header">
+        <div class="header-inner">
+            <button class="btn-back" onclick="window.location.href='index.html'">← Volver</button>
+            <div class="header-brand">
+                <span class="brand-ball">●</span>
+                <h1>Comparador</h1>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="theme-icon">☀</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="comparador-container">
+        <p class="comparador-desc">Busca dos Pokémon para comparar sus estadísticas</p>
+
+        <div class="comparador-grid">
+            <!-- Pokémon 1 -->
+            <div class="comparador-slot" id="slot-1">
+                <div class="slot-search">
+                    <input type="text" id="search-1" placeholder="Buscar pokémon 1..."
+                        oninput="searchPokemon(1)" autocomplete="off">
+                    <div class="slot-suggestions hidden" id="suggestions-1"></div>
+                </div>
+                <div class="slot-card" id="card-1">
+                    <div class="slot-empty">
+                        <span class="slot-empty-icon">?</span>
+                        <p>Selecciona un Pokémon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VS -->
+            <div class="vs-divider">
+                <span>VS</span>
+            </div>
+
+            <!-- Pokémon 2 -->
+            <div class="comparador-slot" id="slot-2">
+                <div class="slot-search">
+                    <input type="text" id="search-2" placeholder="Buscar pokémon 2..."
+                        oninput="searchPokemon(2)" autocomplete="off">
+                    <div class="slot-suggestions hidden" id="suggestions-2"></div>
+                </div>
+                <div class="slot-card" id="card-2">
+                    <div class="slot-empty">
+                        <span class="slot-empty-icon">?</span>
+                        <p>Selecciona un Pokémon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats comparison -->
+        <div class="stats-comparison hidden" id="stats-comparison"></div>
+
+    </main>
+
+    <script src="js/comparador.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <span class="brand-ball">●</span>
+                <h1>Pokédex</h1>
+            </div>
+            <div class="header-controls">
+                <button class="btn-comparador" onclick="window.location.href='comparador.html'">
+                    ⚔ Comparar
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span class="theme-icon">☀</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- FILTROS -->
+    <section class="filters-section">
+        <div class="filters-inner">
+            <div class="search-wrap">
+                <span class="search-icon">🔍</span>
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Buscar pokémon..."
+                    oninput="handleSearch()"
+                    autocomplete="off"
+                >
+                <button class="search-clear hidden" id="search-clear" onclick="clearSearch()">✕</button>
+            </div>
+
+            <div class="filters-row">
+                <!-- Select de tipos con nombre accesible -->
+                <select 
+                    id="filter-type" 
+                    aria-label="Filtrar por tipo" 
+                    title="Filtrar por tipo" 
+                    onchange="applyFilters()"
+                >
+                    <option value="">Todos los tipos</option>
+                    <option value="fire">🔥 Fuego</option>
+                    <option value="water">💧 Agua</option>
+                    <option value="grass">🌿 Planta</option>
+                    <option value="electric">⚡ Eléctrico</option>
+                    <option value="psychic">🔮 Psíquico</option>
+                    <option value="ice">❄️ Hielo</option>
+                    <option value="dragon">🐉 Dragón</option>
+                    <option value="dark">🌑 Siniestro</option>
+                    <option value="fairy">✨ Hada</option>
+                    <option value="fighting">🥊 Lucha</option>
+                    <option value="poison">☠️ Veneno</option>
+                    <option value="ground">🌍 Tierra</option>
+                    <option value="rock">🪨 Roca</option>
+                    <option value="bug">🐛 Bicho</option>
+                    <option value="ghost">👻 Fantasma</option>
+                    <option value="steel">⚙️ Acero</option>
+                    <option value="flying">🦅 Volador</option>
+                    <option value="normal">⭐ Normal</option>
+                </select>
+
+                <!-- Select de generación con nombre accesible -->
+                <select 
+                    id="filter-gen" 
+                    aria-label="Filtrar por generación" 
+                    title="Filtrar por generación" 
+                    onchange="applyFilters()"
+                >
+                    <option value="">Todas las generaciones</option>
+                    <option value="1">Gen I (Kanto)</option>
+                    <option value="2">Gen II (Johto)</option>
+                    <option value="3">Gen III (Hoenn)</option>
+                    <option value="4">Gen IV (Sinnoh)</option>
+                    <option value="5">Gen V (Unova)</option>
+                    <option value="6">Gen VI (Kalos)</option>
+                    <option value="7">Gen VII (Alola)</option>
+                    <option value="8">Gen VIII (Galar)</option>
+                    <option value="9">Gen IX (Paldea)</option>
+                </select>
+
+                <button class="btn-reset" onclick="resetFilters()">↺ Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS INFO -->
+    <div class="results-info">
+        <span id="results-count">Cargando...</span>
+    </div>
+
+    <!-- GRID -->
+    <main class="grid-container" id="pokemon-grid"></main>
+
+    <!-- PAGINACIÓN -->
+    <div class="pagination" id="pagination"></div>
+
+    <!-- LOADER -->
+    <div class="loader hidden" id="loader">
+        <div class="loader-ball"></div>
+        <p>Cargando Pokédex...</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

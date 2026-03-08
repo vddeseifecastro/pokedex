@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon — Detalle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+    <header class="header">
+        <div class="header-inner">
+            <button class="btn-back" onclick="window.history.back()">← Volver</button>
+            <div class="header-brand">
+                <span class="brand-ball">●</span>
+                <h1>Pokédex</h1>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="theme-icon">☀</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="detail-container" id="detail-container">
+        <div class="loader">
+            <div class="loader-ball"></div>
+            <p>Cargando...</p>
+        </div>
+    </main>
+
+    <script src="js/pokemon.js"></script>
+</body>
+</html>
